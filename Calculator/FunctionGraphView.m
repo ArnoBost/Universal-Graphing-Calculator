@@ -158,28 +158,7 @@
     }
     
     //calculate value depending on origin, ignore scale factor at this step
-    result = x - (self.origin.x * self.contentScaleFactor);
-    
-    //math the scale
-    result = result/self.scale;
-    
-    return result;
-}
-
-- (CGFloat)valueForCoordY:(CGFloat)y
-//y must be a pixel within bounds
-{
-    CGFloat result = 0.0;
-    
-    //ensure that x is within bounds
-    if (y < 0) {
-        y = 0.0;
-    } else if (y > self.bounds.size.height*self.contentScaleFactor-1) {
-        y = self.bounds.size.height*self.contentScaleFactor-1;
-    }
-    
-    //calculate value depending on origin, ignore scale factor at this step
-    result = (self.origin.y * self.contentScaleFactor) - y;
+    result = x/self.contentScaleFactor - self.origin.x;
     
     //math the scale
     result = result/self.scale;
@@ -192,23 +171,30 @@
     CGFloat result = 0.0;
     
     //math the scale
-    result = yValue * self.scale;
+    result = yValue * self.scale * self.contentScaleFactor;
     
     //calculate the pixel
-    result = (self.origin.y * self.contentScaleFactor) - result;
+    result = self.origin.y * self.contentScaleFactor - result;
+    
+    //calculate the point
+    result = result/self.contentScaleFactor;
     
     return result;
 }
 
 - (CGFloat)coordXForValue:(CGFloat)xValue
+//returns a Coord Point value (not a pixel!)
 {
     CGFloat result = 0.0;
     
     //math the scale
-    result = xValue * self.scale;
+    result = xValue * self.scale * self.contentScaleFactor;
     
     //calculate the pixel
-    result = (self.origin.x * self.contentScaleFactor) + result;
+    result = self.origin.x * self.contentScaleFactor + result;
+    
+    //calculate the point
+    result = result/self.contentScaleFactor;
     
     return result;
 }
@@ -265,17 +251,17 @@
             
             if (dotDrawing) {
                 if ((yPixel >= 0) && (yPixel < self.bounds.size.height * self.contentScaleFactor)) {
-                    CGRect rect = CGRectMake(xPixel/self.contentScaleFactor, yPixel/self.contentScaleFactor, 1/self.contentScaleFactor, 1/self.contentScaleFactor);
+                    CGRect rect = CGRectMake(xPixel, yPixel, 1/self.contentScaleFactor, 1/self.contentScaleFactor);
                     CGContextFillRect(context, rect);
                 }
             } else {
                 if ((yPixel >= 0) && (yPixel < self.bounds.size.height * self.contentScaleFactor)) {
                     if (inPath) {
-                        CGContextAddLineToPoint(context, xPixel/self.contentScaleFactor, yPixel/self.contentScaleFactor);
+                        CGContextAddLineToPoint(context, xPixel, yPixel);
                     } else {
                         CGContextStrokePath(context);
                         CGContextBeginPath(context);
-                        CGContextMoveToPoint(context, xPixel/self.contentScaleFactor, yPixel/self.contentScaleFactor);
+                        CGContextMoveToPoint(context, xPixel, yPixel);
                         inPath=YES;
                     }
                 } else {

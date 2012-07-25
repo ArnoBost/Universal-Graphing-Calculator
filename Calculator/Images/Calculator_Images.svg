@@ -544,6 +544,33 @@
        y1="22.274221"
        x2="55.145981"
        y2="59.22826" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3783"
+       id="linearGradient3144"
+       gradientUnits="userSpaceOnUse"
+       x1="54.357124"
+       y1="22.274221"
+       x2="55.145981"
+       y2="59.22826" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3783"
+       id="linearGradient3149"
+       gradientUnits="userSpaceOnUse"
+       x1="54.357124"
+       y1="22.274221"
+       x2="55.145981"
+       y2="59.22826" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3783"
+       id="linearGradient3153"
+       gradientUnits="userSpaceOnUse"
+       x1="54.357124"
+       y1="22.274221"
+       x2="55.145981"
+       y2="59.22826" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -554,7 +581,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.3015619"
      inkscape:cx="421.2356"
-     inkscape:cy="736.66398"
+     inkscape:cy="932.58244"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -1048,18 +1075,17 @@
          transform="matrix(1.3826806,0,0,0.99712085,-16.939791,150.86364)" />
     </g>
     <g
-       id="g3118"
-       transform="matrix(1,0,0,0.98713657,0,1.8943807)"
+       id="g3155"
        inkscape:export-filename="/Users/arnobost/Developer/Calculator/Calculator/Images/btn_green_64x124@2x.png"
        inkscape:export-xdpi="180"
        inkscape:export-ydpi="180">
       <rect
-         ry="6.7451506"
+         ry="6.6583848"
          rx="6.6583853"
          inkscape:export-ydpi="1.9565217"
          inkscape:export-xdpi="1.9565217"
          inkscape:export-filename="/Users/arnobost/Developer/Calculator/Calculator/Images/bg_marineblue_1px.png"
-         y="23.268757"
+         y="23.268759"
          x="466.10364"
          height="124"
          width="64"
@@ -1069,8 +1095,8 @@
          inkscape:connector-curvature="0"
          id="path3110"
          d="m 35.184751,26.366911 c -3.480326,-0.01513 -4.131975,2.347973 -4.131975,5.828427 l 0,4.953549 c 4.10019,3.248476 12.28078,5.454801 21.70126,5.454801 9.44634,0 17.6123,-2.221208 21.70126,-5.484286 l 0,-4.924064 c 0,-3.480454 -1.147305,-5.662642 -4.627641,-5.677777 z"
-         style="fill:url(#linearGradient3122);fill-opacity:1;fill-rule:evenodd;stroke:none;filter:url(#filter3807)"
-         transform="matrix(1.3826806,0,0,1.4815597,425.16166,-15.274448)"
+         style="fill:url(#linearGradient3153);fill-opacity:1;fill-rule:evenodd;stroke:none;filter:url(#filter3807)"
+         transform="matrix(1.3826806,0,0,1.4625018,425.16166,-13.183586)"
          sodipodi:nodetypes="sscscsss" />
     </g>
     <g
